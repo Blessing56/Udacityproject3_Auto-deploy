@@ -129,7 +129,7 @@ jobs:
       - checkout
       # Restore from cache
       - restore_cache:
-          kets: [backend-build]
+          keys: [backend-build]
       # Your job code here
       - run:
           name: Scan backend for vulnerabilities
