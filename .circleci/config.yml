@@ -218,7 +218,7 @@ jobs:
 
   run-migrations:
     docker:
-      # Docker image here that support NodeJS
+      # Docker image her that support NodeJS
       - image: circleci/node:13.8.0
     steps:
       # Checkout code from git
@@ -498,9 +498,9 @@ workflows:
           requires: [run-migrations]
       - deploy-backend:
           requires: [run-migrations]
-      # - smoke-test:
-      #     requires: [deploy-backend, deploy-frontend]
-      # - cloudfront-update:
-      #     requires: [smoke-test]
-      # - cleanup:
-      #     requires: [cloudfront-update]
+      - smoke-test:
+          requires: [deploy-backend, deploy-frontend]
+      - cloudfront-update:
+          requires: [smoke-test]
+      - cleanup:
+          requires: [cloudfront-update]
