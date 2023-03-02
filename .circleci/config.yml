@@ -226,14 +226,10 @@ jobs:
       - restore_cache:
           keys: [backend-build]
       - run:
-          name: Install dependencies
-          command: |
-            npm install aws-cli
-      - run:
           name: Run migrations
           command: |
             cd backend
-            sudo npm install -g npm
+            npm install
             #run and save migration output
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
