@@ -402,7 +402,7 @@ jobs:
 
   cloudfront-update:
     docker:
-      # Docker image here that supports AWS CLI
+      # Docker image  heree that supports AWS CLI
       - image: amazon/aws-cli
     steps:
       - checkout
