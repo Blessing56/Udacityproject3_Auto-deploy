@@ -1,0 +1,2 @@
+[URL01] - https://github.com/Blessing56/Udacityproject3_Auto-deploy.git
+[URL02] - http://udapeople-9182192.s3-website-us-east-1.amazonaws.com
