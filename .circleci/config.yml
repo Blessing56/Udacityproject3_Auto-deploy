@@ -33,8 +33,8 @@ commands:
             then
               cd ~/project/backend
               npm install
-              npm run build
-              npm run migrations:revert
+              # npm run build
+              npm run migration:revert
             fi
 
 jobs:
@@ -392,7 +392,7 @@ jobs:
             if curl -s ${URL} | grep "Welcome"
             then
             # Change this to 0 after the job fails
-              return 0
+              return 1
             else
               return 1
             fi
